@@ -33,6 +33,11 @@ public class MainLayout implements Layout {
     }
 
     private void configureNavigation(LayoutSpec layout) {
+        layout.section("Главное")
+                .order(-1)
+                .icon("layout-dashboard")
+                .page("/", "Дашборд", "layout-dashboard");
+
         layout.section("Клиенты и тарифы")
                 .order(0)
                 .icon("users")
